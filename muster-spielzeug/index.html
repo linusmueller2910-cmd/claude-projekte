@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fließmuster</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div id="ui">
+    <button id="clearBtn" title="Leinwand leeren">Leeren</button>
+    <button id="paletteBtn" title="Farbpalette wechseln">Palette</button>
+    <button id="saveBtn" title="Als Bild speichern">Speichern</button>
+    <label id="brushLabel">
+      Pinsel
+      <input type="range" id="brushSize" min="1" max="6" step="0.5" value="2.5" />
+    </label>
+    <button id="helpBtn" title="Hilfe anzeigen">?</button>
+  </div>
+
+  <div id="hint">Bewege die Maus oder tippe, um Muster zu malen</div>
+
+  <div id="helpOverlay" class="hidden">
+    <div class="helpBox">
+      <h2>Fließmuster</h2>
+      <p>Bewege Maus oder Finger über die Leinwand, um organische, fließende Farbspuren zu erzeugen.</p>
+      <ul>
+        <li><strong>Leeren</strong> — Leinwand zurücksetzen</li>
+        <li><strong>Palette</strong> — Farbschema wechseln</li>
+        <li><strong>Speichern</strong> — aktuelles Muster als PNG herunterladen</li>
+        <li><strong>Pinsel</strong> — Partikelgröße einstellen</li>
+        <li><strong>Leertaste</strong> — Leinwand leeren</li>
+      </ul>
+      <button id="closeHelp">Los geht's</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
